@@ -3,7 +3,7 @@
 //!
 //! ## Example
 //!
-//! The following is an implementation of Lindenmayer's [algae
+//! The following is an implementation of [Lindenmayer's algae
 //! L-system](https://en.wikipedia.org/wiki/L-system#Example_1:_Algae):
 //!
 //! ```
@@ -47,7 +47,8 @@ impl<'a, T> Rules<'a, T> {
     }
 }
 
-/// An L-system, defined by a ruleset (see [`Rules`]) and a current string state.
+/// An L-system, defined by a ruleset (see [`Rules`]) and a current string
+/// state.
 ///
 /// The set of allowed symbols within the system can include all possible values
 /// of `T`, depending on the initial string and ruleset. If you need to restrict

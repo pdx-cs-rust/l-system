@@ -7,14 +7,14 @@ fn test_basics() {
     assert_eq!(0, empty.len());
 
     let abc = Rules::default()
-        .with_rule(&['a'], &['b'])
-        .with_rule(&['b'], &['c'])
-        .with_rule(&['c'], &['a']);
+        .with_rule(&[1], &[2])
+        .with_rule(&[2], &[3])
+        .with_rule(&[3], &[1]);
     assert_eq!(3, abc.len());
 
-    let mut abc_sys = LSystem::new(&abc, vec!['a', 'b', 'c']);
+    let mut abc_sys = LSystem::new(&abc, vec![1, 2, 3]);
     assert_eq!(
-        "cab".to_owned(),
-        abc_sys.nth(368).unwrap().iter().collect::<String>()
+        vec![3, 1, 2],
+        abc_sys.nth(368).unwrap()
     );
 }

@@ -3,8 +3,8 @@
 //!
 //! ## Example
 //!
-//! The following is an implementation of Lindenmayer's algae L-system using
-//! this library:
+//! The following is an implementation of Lindenmayer's [algae
+//! L-system](https://en.wikipedia.org/wiki/L-system#Example_1:_Algae):
 //!
 //! ```
 //! use lsystem::{LSystem, Rules};
@@ -22,7 +22,6 @@
 //! assert_eq!("ABAABABA".chars().collect::<Vec<_>>(), system.next().unwrap());
 //! assert_eq!("ABAABABAABAAB".chars().collect::<Vec<_>>(), system.next().unwrap());
 //! ```
-
 
 /// A set of rules for an L-system.
 ///

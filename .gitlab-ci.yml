@@ -39,4 +39,4 @@ clippy:
   before_script:
     - rustup component add clippy
   script:
-    - cargo clippy
+    - cargo clippy -- -D warnings

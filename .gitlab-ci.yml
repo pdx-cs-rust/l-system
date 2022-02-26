@@ -1,5 +1,6 @@
 stages:
   - build
+  - rustfmt
 
 default:
   before_script:
@@ -22,3 +23,11 @@ rust-nightly:
   allow_failure: true
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+rustfmt:
+  stage: rustfmt
+  image: rust:latest
+  before_script:
+    - rustup component add rustfmt
+  script:
+    - cargo fmt --all -- --check

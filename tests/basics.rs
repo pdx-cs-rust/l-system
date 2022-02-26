@@ -13,8 +13,5 @@ fn test_basics() {
     assert_eq!(3, abc.len());
 
     let mut abc_sys = LSystem::new(&abc, vec![1, 2, 3]);
-    assert_eq!(
-        vec![3, 1, 2],
-        abc_sys.nth(368).unwrap()
-    );
+    assert_eq!(vec![3, 1, 2], abc_sys.nth(368).unwrap());
 }

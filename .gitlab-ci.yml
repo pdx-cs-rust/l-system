@@ -40,3 +40,4 @@ clippy:
     - rustup component add clippy
   script:
     - cargo clippy -- -D warnings
+  allow_failure: true

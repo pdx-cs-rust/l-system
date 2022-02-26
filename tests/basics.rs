@@ -17,4 +17,8 @@ fn test_basics() {
         vec![3, 1, 2],
         abc_sys.nth(368).unwrap()
     );
+    assert_eq!(
+        vec![1, 2, 3],
+        abc_sys.nth(369).unwrap()
+    );
 }

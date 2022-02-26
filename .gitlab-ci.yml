@@ -1,6 +1,11 @@
 stages:
   - build
 
+default:
+  before_script:
+    - rustc --version
+    - cargo --version
+
 rust-latest:
   stage: build
   image: rust:latest
@@ -14,3 +19,6 @@ rust-nightly:
   script:
     - cargo build --verbose
     - cargo test --verbose
+  allow_failure: true
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

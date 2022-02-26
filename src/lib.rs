@@ -84,7 +84,7 @@ impl<'a, T: Clone + PartialEq> LSystem<'a, T> {
                 self.rules.0.iter().find(|(pred, _)| sub.starts_with(pred))
             {
                 new_string.extend_from_slice(succ);
-                i += pred.len();
+                i += pred.len() + 1;
             } else {
                 new_string.push(sub[0].clone());
                 i += 1;

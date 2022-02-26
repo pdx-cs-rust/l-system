@@ -33,7 +33,7 @@ impl<'a, T> Rules<'a, T> {
     /// Add a rule defined by a predecessor and successor.
     pub fn with_rule(mut self, pred: &'a [T], succ: &'a [T]) -> Self {
         self.0.push((pred, succ));
-        self
+        return self;
     }
 
     /// The number of rules in this ruleset.
